@@ -2,6 +2,10 @@
 body {
   background-color:#f6f4f1;
 }
+body.active {
+  overflow:hidden;
+}
+
 #wrap {
   
 }

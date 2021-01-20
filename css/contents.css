@@ -16,3 +16,30 @@
 .tab-type-1 li a.active {
   border-bottom:1px solid #000;
 }
+
+/* faq-list */
+.faq-list {
+  padding:100px;
+}
+.faq-list li {
+  padding:10px;
+  border-bottom:1px solid #ccc;
+}
+.faq-list li .q {
+  display:block;
+  padding:5px;
+  font-size:20px;
+}
+.faq-list li .a {
+  display:none;
+  padding:5px;
+  font-size:16px;
+  line-height:20px;
+}
+.faq-list li.active .q {
+  color:red;
+  font-weight:bold;
+}
+.faq-list li.active .a {
+  display:block;
+}
