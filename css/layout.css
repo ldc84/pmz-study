@@ -75,6 +75,9 @@ header .menu.active span:after {
   bottom:0;
   background-color:rgba(0,0,0,0.5);
 }
+body.active .dim {
+  display:block;
+}
 
 /* menuWrap */
 #menuWrap {
@@ -85,6 +88,7 @@ header .menu.active span:after {
   width:70%;
   padding:130px 35px 0;
   background-color:#f6f4f1;
+  transition: all .3s ease-in-out;
 }
 #menuWrap .search-box input {
   width:100%;
@@ -127,6 +131,9 @@ header .menu.active span:after {
   color:#333;
   font-size:16px;
   font-weight:500;
+}
+#menuWrap.active {
+  left:0;
 }
 
 /* container */
