@@ -68,16 +68,11 @@ $(function(){
     return false;
   });
 
-  $(window).on('scroll', function(){
-    var win = $(this).scrollTop();
-    $('.product-list').css('transform', 'rotateY('+(0.1*win)+'deg)')
-    // if(win >= 100){
-    //   $('header').css('position','fixed');
-    // }else {
-    //   $('header').css('position','relative');
-    // }
-  });
-
+  // scroll event
+  // $(window).on('scroll', function(){
+  //   var win = $(this).scrollTop();
+  //   $('.product-list').css('transform', 'rotateY('+(0.1*win)+'deg)')
+  // });
 
   // 조건문
   // var truefalse = false;
