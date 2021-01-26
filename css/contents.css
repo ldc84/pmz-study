@@ -7,14 +7,27 @@
   margin:0 20px;
 }
 .tab-type-1 li a {
+  position:relative;
   display:block;
   padding:0 0 5px 0;
   color:#333;
   font-size:24px;
   font-weight:500;
 }
-.tab-type-1 li a.active {
-  border-bottom:1px solid #000;
+.tab-type-1 li a:after {
+  content:'';
+  display:block;
+  position:absolute;
+  bottom:0;
+  left:50%;
+  width:0;
+  height:1px;
+  background-color:#000;
+  transition:all .2s ease-in-out;
+}
+.tab-type-1 li a.active:after {
+  left:0;
+  width:100%;
 }
 
 /* faq-list */
@@ -42,4 +55,20 @@
 }
 .faq-list li.active .a {
   display:block;
+}
+
+/* product-list */
+.product-list {
+  display: flex;
+  flex-wrap:wrap;
+}
+.product-list li {
+  width:33.33333%;
+  margin-top:30px;
+}
+.product-list li a {
+  display:block;
+}
+.product-list li a img {
+  width:100%;  
 }

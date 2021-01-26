@@ -54,11 +54,28 @@
     <section id="container">
       
       <ul class="tab-type-1">
-        <li><a href="" class="active">전체보기</a></li>
-        <li><a href="">사계절</a></li>
-        <li><a href="">여름</a></li>
-        <li><a href="">겨울</a></li>
+        <li><a href="" class="active" data-target=".total">전체보기</a></li>
+        <li><a href="" data-target=".season">사계절</a></li>
+        <li><a href="" data-target=".summer">여름</a></li>
+        <li><a href="" data-target=".winter">겨울</a></li>
       </ul>
+
+      <!-- product-list -->
+      <ul class="product-list">
+        <li class="total summer">
+          <a href=""><img alt="" src="https://plusminuszero.kr/image/product/product-11-on@2x.jpg" style=""></a>
+        </li>
+        <li class="total season">
+          <a href=""><img alt="" src="https://plusminuszero.kr/image/product/product-12-on@2x.jpg" style=""></a>
+        </li>
+        <li class="total summer">
+          <a href=""><img alt="" src="https://plusminuszero.kr/image/product/product-13-on@2x.jpg" style=""></a>
+        </li>
+        <li class="total winter">
+          <a href=""><img alt="" src="https://plusminuszero.kr/image/product/product-14-on@2x.jpg" style=""></a>
+        </li>
+      </ul>
+      <!-- //product-list -->
 
     </section>
     <!-- //container -->
@@ -108,6 +125,9 @@
 
   </div>
   <!-- //wrap -->
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="./js/ui.js"></script>
 
 
 </body>

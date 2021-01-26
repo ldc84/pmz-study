@@ -92,6 +92,7 @@ body.active .dim {
   width:70%;
   padding:130px 35px 0;
   background-color:#f6f4f1;
+  z-index: 10;
   transition: all .3s ease-in-out;
 }
 #menuWrap .search-box input {

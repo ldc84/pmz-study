@@ -31,6 +31,7 @@ $(function(){
   });
   */
 
+  // faq
   var faq = $('.faq-list');
   var faqBtn = faq.find('.q');
 
@@ -47,5 +48,55 @@ $(function(){
 
     return false;
   });
+
+  // product
+  var tab = $('.tab-type-1');
+  var tabBtn = tab.find('a');
+
+  tabBtn.on('click', function(){
+    var $this = $(this);
+    var $target = $this.attr('data-target');
+    var parent = $this.parent('li');
+    var sibl = parent.siblings('li');
+
+    $($target).siblings('li').hide();
+    $($target).fadeIn(150);
+
+    $this.addClass('active');
+    sibl.find('a').removeClass('active');
+
+    return false;
+  });
+
+  $(window).on('scroll', function(){
+    var win = $(this).scrollTop();
+    $('.product-list').css('transform', 'rotateY('+(0.1*win)+'deg)')
+    // if(win >= 100){
+    //   $('header').css('position','fixed');
+    // }else {
+    //   $('header').css('position','relative');
+    // }
+  });
+
+
+  // 조건문
+  // var truefalse = false;
+
+  // if(truefalse){
+  //   console.log('true');
+  // }else {
+  //   console.log('false');
+  // }
+
+  // 반복문
+  // tabBtn.each(function(e){
+    
+  // });
+
+
+
+  // addClass
+  // removeClass
+  // toggleClass
 
 });
