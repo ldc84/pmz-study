@@ -37,11 +37,16 @@ $(function(){
 
   faqBtn.on('click', function(){
     var $this = $(this);
+    var next = $this.next('.a');
     var parent = $this.parent('li');
     var sibl = parent.siblings('li');
+    var siblNext = sibl.find('.a');
 
     parent.toggleClass('active');
     sibl.removeClass('active');
+
+    next.stop().slideToggle(250);
+    siblNext.stop().slideUp(250);
 
     // $(this).parent('li').toggleClass('active');
     // $(this).parent('li').siblings('li').removeClass('active');
@@ -66,6 +71,26 @@ $(function(){
     sibl.find('a').removeClass('active');
 
     return false;
+  });
+
+  var link = $('.link-move > a');
+
+  link.on('click', function(){
+    var href = $(this).attr('href');
+
+    $('html, body').animate({
+      scrollTop: $(href).offset().top - 100
+      // scrollTop: $(href).scrollTop()
+    });
+
+    console.log($(document).height(), $(window).height());
+    
+    return false;
+  });
+
+  $(window).on('resize', function(){
+    $('.movie iframe').height($('.movie iframe').width()*0.54);
+    console.log($('.movie iframe').width());
   });
 
   // scroll event

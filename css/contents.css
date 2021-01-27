@@ -53,9 +53,6 @@
   color:red;
   font-weight:bold;
 }
-.faq-list li.active .a {
-  display:block;
-}
 
 /* product-list */
 .product-list {
@@ -67,8 +64,62 @@
   margin-top:30px;
 }
 .product-list li a {
+  position:relative;
   display:block;
+  overflow: hidden;
+  font-size:0;
+  line-height:0;
 }
 .product-list li a img {
   width:100%;  
+  transition:all .2s ease-in-out;
+}
+.product-list li a .hover {
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+  opacity: 0;
+  transition:all .2s ease-in-out;
+}
+.product-list li a:hover .hover {
+  transform:scale(1.1);
+  opacity: 1;
+}
+/* .product-list li a:hover img {
+  transform:scale(1.5);
+} */
+
+/* slick-wrap */
+.slick-wrap {
+  position:relative;
+}
+.slick-wrap .slick-slide {
+  float:left;
+  height:300px;
+  color:blue;
+  background-color:#fff;
+  text-align:center;
+}
+.slick-dots {
+  position: absolute;
+  bottom:0;
+  left:50%;
+  transform: translateX(-50%);
+}
+.slick-dots li {
+  float:left;
+}
+.slick-dots li button {
+  width:20px;
+  height:20px;
+  background:#fff;
+  border:1px solid blue;
+  border-radius: 50%;
+}
+
+/* scroll-box */
+.scroll-box > div {
+  height:300px;
+  border:3px solid #000;
 }
